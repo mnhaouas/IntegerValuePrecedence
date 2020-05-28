@@ -2,7 +2,8 @@
  * Author: HAOUAS, Mohammed Najib - sept 28th, 2019
  *                   Last modified: nov 4th, 2019
  *
- * This constraint ensures integer value precedence of value s over value t across integer variable array X and proceeds to the appropriate filtering.
+ * This constraint ensures integer value precedence of value s over value t across
+ *     integer variable array X and proceeds to the appropriate filtering.
  * This constraint is useful for breaking value symmetries.
  * This constraint maintains Generalized Arc Consistency (GAC).
  * A sequence of precedence can be maintained by posting this constraint for each pair or values.
