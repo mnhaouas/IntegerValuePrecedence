@@ -3,7 +3,7 @@
 This is an implementation of a Global CP Constraint for maintaining Integer Value Precedence over a sequence of Integer Variables.
 
 This Constraint, along with its filtering algorithm, has first appeared in:
-> Law Y.C., Lee J.H.M. (2004) Global Constraints for Integer and Set Value Precedence. In: Wallace M. (eds) Principles and Practice of Constraint Programming – CP 2004. CP 2004. Lecture Notes in Computer Science, vol 3258. Springer, Berlin, Heidelberg. doi:[10.1007/978-3-540-30201-8_28](https://doi.org/10.1007/978-3-540-30201-8_28)
+> Law Y.C., Lee J.H.M. (2004) Global Constraints for Integer and Set Value Precedence. In: Wallace M. (eds) *Principles and Practice of Constraint Programming – CP 2004*. CP 2004. Lecture Notes in Computer Science, vol 3258. Springer, Berlin, Heidelberg. doi:[10.1007/978-3-540-30201-8_28](https://doi.org/10.1007/978-3-540-30201-8_28)
 
 ## Usefulness
 
@@ -28,7 +28,7 @@ The filtering algorithm implemented by this Global Constraint has a time complex
 
 This Global Constraint can be used in *Concert Technology for C++*, a modeling layer included with *IBM ILOG CPLEX Optimization Studio*, which provides interfaces to *CP Optimizer* as well as *CPLEX Optimizer* for use in your own C++ applications.
 
-To start using this Constraint, include `IloIntPrecedeBinary.h` in your Concert Technology C++ sources. You can then add it to your `IloModel` using its member function `IloModel::add`. `IloIntPrecedeBinary` has the following prototype:
+To start using this Constraint, include `IloIntPrecedeBinary.h` in your *Concert Technology* C++ sources. You can then add it to your `IloModel` using its member function `IloModel::add`. `IloIntPrecedeBinary` has the following prototype:
 ```
 IloConstraint  IloIntPrecedeBinary(IloEnv env, IloIntVarArray X, IloInt s, IloInt t, const char* name = 0);
 ```
@@ -50,7 +50,7 @@ Though posting on all possible pairs of values would've ensured strictly stronge
 ## Another way...
 
 The same value precedence enforcement can be achieved using a *Regular Language Membership* Constraint, which appears in:
-> Pesant G. (2004) A Regular Language Membership Constraint for Finite Sequences of Variables. In: Wallace M. (eds) Principles and Practice of Constraint Programming – CP 2004. CP 2004. Lecture Notes in Computer Science, vol 3258. Springer, Berlin, Heidelberg. doi:[10.1007/978-3-540-30201-8_36](https://doi.org/10.1007/978-3-540-30201-8_36)
+> Pesant G. (2004) A Regular Language Membership Constraint for Finite Sequences of Variables. In: Wallace M. (eds) *Principles and Practice of Constraint Programming – CP 2004*. CP 2004. Lecture Notes in Computer Science, vol 3258. Springer, Berlin, Heidelberg. doi:[10.1007/978-3-540-30201-8_36](https://doi.org/10.1007/978-3-540-30201-8_36)
 
 Look out for a future implementation of this work using *IBM ILOG CPLEX Optimization Studio*.
 
