@@ -52,7 +52,7 @@ Though posting on all possible pairs of values would've ensured strictly stronge
 The same value precedence enforcement can be achieved using a *Regular Language Membership* Constraint, which appears in:
 > Pesant G. (2004) A Regular Language Membership Constraint for Finite Sequences of Variables. In: Wallace M. (eds) Principles and Practice of Constraint Programming – CP 2004. CP 2004. Lecture Notes in Computer Science, vol 3258. Springer, Berlin, Heidelberg. doi:[10.1007/978-3-540-30201-8_36](https://doi.org/10.1007/978-3-540-30201-8_36)
 
-Look out for a future implementation of this work on using *IBM ILOG CPLEX Optimization Studio*.
+Look out for a future implementation of this work using *IBM ILOG CPLEX Optimization Studio*.
 
 ## Other platforms
 
