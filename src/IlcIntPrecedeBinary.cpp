@@ -1,5 +1,5 @@
 /*
- * Author: HAOUAS, Mohammed Najib - sept 28th, 2019
+ * Author: Haouas, Mohammed Najib - sept 28th, 2019
  *                   Last modified: nov 4th, 2019
  *
  * This constraint ensures integer value precedence of value s over value t across
@@ -7,6 +7,11 @@
  * This constraint is useful for breaking value symmetries.
  * This constraint maintains Generalized Arc Consistency (GAC).
  * A sequence of precedence can be maintained by posting this constraint for each pair or values.
+ * 
+ * Main arguments: * X, integer variables over which precedence must be maintained.
+ *
+ * Additional arguments: * s, antecedent value.
+ *                       * t, subsequent value.
  *
  * Note: posting on all pairs of values ensures strictly stronger
  *     filtering but is inefficient in practice and does not produce
@@ -24,7 +29,8 @@
 #include "IlcIntPrecedeBinary.h"
 
 
-IlcIntPrecedeBinaryI::IlcIntPrecedeBinaryI(IloCPEngine cp, IlcIntVarArray X, IlcInt s, IlcInt t) : IlcConstraintI(cp), _cp(cp), _X(X), _n(_X.getSize()), _s(s), _t(t) {
+IlcIntPrecedeBinaryI::IlcIntPrecedeBinaryI(IloCPEngine cp, IlcIntVarArray X, IlcInt s, IlcInt t) :
+IlcConstraintI(cp), _cp(cp), _X(X), _n(_X.getSize()), _s(s), _t(t) {
     // Cannot use reversible objects as automatic objects
     alpha = new (_cp.getHeap()) IlcRevInt(_cp, 0);
     beta = new (_cp.getHeap()) IlcRevInt(_cp);

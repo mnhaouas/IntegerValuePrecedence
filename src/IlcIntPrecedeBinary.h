@@ -1,5 +1,5 @@
 /*
- * Author: HAOUAS, Mohammed Najib - sept 28th, 2019
+ * Author: Haouas, Mohammed Najib - sept 28th, 2019
  *                   Last modified: nov 4th, 2019
  *
  * This constraint ensures integer value precedence of value s over value t across
@@ -7,6 +7,11 @@
  * This constraint is useful for breaking value symmetries.
  * This constraint maintains Generalized Arc Consistency (GAC).
  * A sequence of precedence can be maintained by posting this constraint for each pair or values.
+ * 
+ * Main arguments: * X, integer variables over which precedence must be maintained.
+ *
+ * Additional arguments: * s, antecedent value.
+ *                       * t, subsequent value.
  *
  * Note: posting on all pairs of values ensures strictly stronger
  *     filtering but is inefficient in practice and does not produce
@@ -28,13 +33,15 @@
 #endif
 
 
+// Variable names are kept consistent with Law et al.'s nomenclature.
+//     Refer to cited paper above for any additional explanation of the filtering algorithm.
+
+
 ILOSTLBEGIN
 
 
 class IlcIntPrecedeBinaryI : public IlcConstraintI {
 protected:
-    // Variable names are kept consistent with Law et al.'s nomenclature.
-    //     Refer to cited paper above for any additional explanation of the filtering algorithm.
     void updateBeta();
 
     IlcIntVarArray _X;
